@@ -1,0 +1,7 @@
+#ifndef my_local_wifi
+#define my_local_wifi
+
+char ssid[] = "";
+char password[] = "";
+
+#endif

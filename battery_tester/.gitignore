@@ -1,3 +1,6 @@
 *
 !.gitignore
 !battery_tester.ino
+!readme.md
+!my_local_wifi.h.example
+!my_local_server.h.example

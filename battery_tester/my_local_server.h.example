@@ -1,0 +1,6 @@
+#ifndef my_local_server
+#define my_local_server
+
+char* serverName = "http://yourserver.local/route";
+
+#endif
