@@ -41,15 +41,17 @@ void loop() {
   delay(1000);
   count += 1;
 
-  if(count > 10) {
+  if(count > 30) {
     count = 0;
     WiFiClient client;
     HTTPClient http;
-    
+
+    int rawVoltage = analogRead(A0);
+    double scaledVoltage = rawVoltage * 5.2 / 1024.0;
+
     http.begin(client, serverName);
     http.addHeader("Content-Type", "text/plain");
-    String message = "I'm still alive";
-    int httpResponseCode = http.POST(message);
+    int httpResponseCode = http.POST(String(scaledVoltage));
 
     Serial.print("HTTP Response code: ");
     Serial.println(httpResponseCode);
